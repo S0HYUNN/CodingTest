@@ -1,0 +1,36 @@
+# 위험한 효도
+import sys
+sys.stdin = open('sample_input.txt')
+
+a, b, d = map(int, input().split())
+
+result = 0
+walk = 0
+
+while True:
+    for _ in range(a):
+        walk += 1
+        result += 1
+        
+        if walk == d:
+            break
+    if walk == d:
+        break
+    result += b
+    
+walk = 0
+    
+    
+while True:
+    for _ in range(b):
+        walk += 1
+        result += 1
+        
+        if walk == d:
+            break
+        
+    if walk == d:
+        break
+    result += a
+
+print(result)
